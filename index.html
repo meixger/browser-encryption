@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browser Encryption</title>
+</head>
+
+<body class="p-2">
+  <div class="container m-auto max-w-xl flex flex-col gap-4">
+    <ul class="m-auto">
+      <li>🔐 Encryption with Web Crypto API</li>
+      <li>😎 Fully client side - Zero trust</li>
+      <li>🔑 Secure AES-GCM 256 algorithm</li>
+      <li>⛓️‍💥 No 3th party dependencies</li>
+      <li>🤫 No data sent to server</li>
+      <li>🤖 Zero tracking or analytics</li>
+    </ul>
+    <div id="app" class="flex flex-col gap-2">
+      <label>
+        <div class="flex justify-between">
+          Password:
+          <button id="showpassword" class="underline">Show</button>
+        </div>
+        <div>
+          <input class="px-4 py-2 border border-sky-600 w-full" type="password" id="password"
+            placeholder="Enter password to derive key from" autofocus>
+        </div>
+      </label>
+      <label>
+        Input:
+        <textarea class="px-4 py-2 border w-full border-sky-600" rows="6" id="input"></textarea>
+      </label>
+      <div class="flex gap-2 content-between">
+        <button class="grow px-4 py-2 border bg-sky-600 text-white" id="encrypt">Encrypt</button>
+        <button class="grow px-4 py-2 border bg-sky-600 text-white" id="decrypt">Decrypt</button>
+      </div>
+      <label>
+        <div class="flex justify-between">
+          Output:
+          <button id="copy" class="underline">Copy</button>
+        </div>
+        <textarea class="px-4 py-2 border w-full border-sky-600" rows="6" id="output" readonly></textarea>
+      </label>
+      <div class="text-right text-slate-500">
+        Made by <a class="underline" href="https://martin.bz">Martin Meixger</a>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
