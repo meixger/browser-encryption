@@ -1,0 +1,1 @@
+https://web.dev/articles/base64-encoding
